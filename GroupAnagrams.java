@@ -1,4 +1,5 @@
-//Sorting - Total Tc - N2LogN
+
+// O(n2logn) 
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
@@ -20,7 +21,11 @@ class Solution {
     }
 }
 
-//Tc - N2
+
+
+
+//Tc - O(n2)
+
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
@@ -46,5 +51,3 @@ class Solution {
         return values;
     }
 }
-
-
