@@ -29,3 +29,39 @@ class Solution {
         return max;
     }
 }
+
+//Optimal
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if(nums.length == 0) return 0;
+
+        Set<Integer> set = new HashSet<>();
+
+        for(int num : nums) {
+            set.add(num);
+        }
+
+        int max = 1;
+
+        for(int num : set) {
+
+            //checking if not starting of series
+            if(set.contains(num-1)) {
+                continue;
+            }
+
+            int count = 1;
+            int curr = num+1;
+
+            while(set.contains(curr)) {
+                count++;
+                if(count > max) max = count;
+
+                curr++;
+            }
+        }
+
+        return max;
+    }
+}
