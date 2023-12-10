@@ -1,3 +1,4 @@
+//BFS QUEUE way
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
@@ -28,7 +29,7 @@ class Solution {
 }
 
 
-//Recursive way
+//Recursive way (DFS)
 class Solution {
     public int maxDepth(TreeNode root) {
         return helper(root);
